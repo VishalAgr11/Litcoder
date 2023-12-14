@@ -591,3 +591,330 @@ Input:
 Output:
 2
 4
+
+
+## Task Scheduling
+There are N tasks of varying durations, represented by an array A of size N. K workers are available, and each worker takes 1 unit of time to complete 1 unit of work. The goal is to find the minimum time required to complete all the tasks, with the constraint that each worker can only work on a continuous sequence of tasks.
+To solve this problem, we can use the binary search algorithm to find the minimum time required..
+e.g., with 4 tasks of 10,20,30 & 40 time duration and 2 workers, min time is 60 mins.
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+
+INPUT :
+4
+10 20 30 40
+2
+
+First line => Number of tasks
+Second line => task durations
+Third line => Number of workers
+
+OUTPUT :
+60
+
+Exercise-2
+
+Input:
+4
+60 20 40 50
+2
+
+Output:
+90
+
+
+## Merge two sorted linked lists
+Suppose we have two sorted linked lists, represented by the pointers headA and headB. Our task is to merge these two lists into a single sorted linked list. It's possible for either headX or headY to be null, indicating that the corresponding list is empty.
+
+For example, consider the following linked lists:
+
+headX refers to 2 -> 4 -> 6 -> 8 -> NULL
+headY refers to 1 -> 3 -> 5 -> NULL
+
+We need to merge these two lists into a new list, where the elements are sorted in ascending order. After merging, the resulting linked list would be:
+
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 8 -> NULL
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+input:
+3
+1
+3
+7
+2
+1
+2
+
+output:
+1
+1
+2
+3
+7
+
+Here the first value is the count of the first link node, and the fifth value is the count of the second link node.
+
+Exercise-2
+input:
+3
+2
+3
+4
+2
+1
+7
+Output:
+1
+2
+3
+4
+7
+
+
+## Connecting a network
+In a geographical region, there are N cities labeled from 1 to N. These cities are interconnected using various transportation routes forming a network. The city connectivity is represented by a list of connections between cities in the form of a 2D array route[][]. Each row (city1, city2) denotes a direct transportation route between city1 and city2.
+
+Your task is to ensure that all cities are connected either directly or indirectly. To achieve this, you can perform the following operations:
+
+Remove any existing transportation route between two cities.
+Add a new transportation route between two disconnected cities.
+Your goal is to find the minimum number of operations required to achieve full connectivity of all cities in the region.
+
+Return the minimum number of times you need to do this in order to make all the cities connected. If it is not possible, return -1.
+
+Example
+Input: N = 6,
+
+routes[][] = {{1, 2}, {2, 3}, {3, 5}, {4, 5}, {5, 6}}
+
+Output:
+1
+
+Exercise-1
+
+Input : 
+6
+5
+0 1
+0 2
+0 3
+1 2
+1 3
+
+Note:
+Line 1: Available cities
+Line 2 : No of routes
+From line 3 : connected cities pair
+
+Output :
+2
+Exercise-2
+
+Input:
+5
+5
+0 1
+0 2
+0 3
+1 2
+2 3
+
+Output:
+1
+
+
+## Is Graph Bipartite?
+You have an undirected graph with n nodes, each represented by a number between 0 and n - 1. The graph is described by a 2D array graph, where graph[u] is an array containing nodes adjacent to node u. In other words, there is an undirected edge between node u and each node v present in graph[u]. The graph satisfies the following conditions:
+
+There are no self-edges, meaning that node u is not present in graph[u].
+There are no parallel edges, implying that each node appears only once in the adjacency list.
+The graph is undirected, so if node v is adjacent to node u, then node u is also adjacent to node v (i.e., an edge between u and v implies an edge between v and u).
+The graph may not be fully connected, so there can be two nodes u and v such that there is no direct path between them.
+The task is to determine whether the given graph is bipartite or not. A graph is considered bipartite if its nodes can be partitioned into two independent sets, denoted as set A and set B, such that each edge connects a node from set A to a node from set B.
+Example:
+
+Input: [[1, 2, 3], [0, 2], [0, 1, 3], [0, 2]]
+Output : false
+
+0 -- 1
+| |
+3 -- 2
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+
+Input : 
+4
+1 2 3
+0 2
+0 1 3
+0 2
+
+Output :
+false
+Exercise-2
+
+Input:
+4
+1 2 3
+0 2
+0 1
+0
+
+Output:
+false
+Exercise-3
+
+Input:
+4
+1 3
+0 2
+1 3
+0 2
+
+Output:
+true
+
+
+## Distance of Elements
+How can I determine if an array, possibly unsorted and containing duplicates, has duplicate elements within a specific distance "k" from each other? To provide further context, imagine you have an array of elements where the order is not important, and there may be duplicates present. For example, [5, 2, 3, 2, 4, 1]. You need to determine if there are any duplicate elements that are within a distance of "k" from each other. The distance "k" represents the number of indices between two elements in the array. If there are any duplicates within this distance, the function should return Yes; otherwise, it should return No.
+
+Additionally, let's consider a scenario where you are given an array such as [7, 4, 5, 9, 2, 4, 1] and a number "k" that is smaller than the size of the array. For example, if "k" is 3, it means we need to check if there are any duplicate elements within a distance of 3 indices. In this case, the function should return true because the array contains duplicates within the specified distance.
+
+e.g. If input is
+
+1 2 3 4 1
+5
+return Yes
+
+9 5 2 4 2 5 7 => input values
+1 => k distance
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+
+Input :
+
+9 5 2 4 2 5 7
+1
+
+Output :
+
+No
+
+Exercise-2
+
+Input:
+
+9 5 2 4 2 5 7
+3
+
+Output:
+
+Yes
+
+
+## Close the brackets
+You are given a set of strings, each consisting of brackets (, ), {, }, [, or ]. A bracket is considered an opening bracket if it is one of (, {, or [, and it is considered a closing bracket if it is one of ), }, or ].
+
+A string of brackets is considered balanced if it meets the following conditions:
+
+It contains no unmatched brackets.
+For every opening bracket, there is a corresponding closing bracket of the same type, and the brackets are properly nested.
+
+Your task is to determine, for each given string, whether it is balanced or not. If a string is balanced, output "YES"; otherwise, output "NO".
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+input:
+{[()]},{[(])},{{[[(())]]}}
+
+Output:
+YES
+NO
+YES
+
+Exercise-2
+input:
+[],{},(),[}
+Output:
+YES
+YES
+YES
+NO
+
+
+## Keeping a Secret
+On the first day, one person discovers a secret.
+
+You are given two integers, delay and forget. Each person will share the secret with a new person every day, starting from delay days after discovering the secret. Additionally, each person will forget the secret days after discovering it. It means they cannot share the secret on the same day they forget it or on any day afterward.
+
+Your task is to find the number of people who know the secret at the end of day n.
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Example
+
+INPUT
+6
+2
+4
+
+Note: 
+Line 1 :  number of days secret get spread
+Line 2: delay day
+Line 3 : forgetting day
+
+OUTPUT
+5
+Exercise-1
+
+Input : 
+4
+1
+3
+
+Output:
+6
+Exercise-2
+
+Input:
+3
+2
+3
+
+Output:
+2
+
+
+## Common Child String
+Let's consider a different scenario with two strings, s1='XYZA' and s2='XAYZ'. We want to find the longest string that can be formed by removing characters from both strings without rearranging any letters. In this case, the strings have two children with a maximum length of 2: 'XY' and 'YZ'. These children can be obtained by eliminating either the 'A' or 'Z' character from both strings. The desired result for this scenario would be 2, indicating the length of the longest common child string.
+
+Important Note: Ensure that you save your solution before progressing to the next question and before submitting your answer.
+
+Exercise-1
+
+Input:
+pqrs
+opqs
+
+Output:
+
+3
+
+Exercise-2
+
+Input:
+
+pacb
+opqs
+
+Output:
+1
