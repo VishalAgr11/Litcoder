@@ -38,10 +38,10 @@ y
 d
  */
 
-package Litcoder;
+
 import java.util.*;
 
-public class M2L1_2 {
+public class TextEditorUsingCommands {
     public static String insert(String text, String value) {
         return text + value;
     }
@@ -89,4 +89,3 @@ public class M2L1_2 {
     }
 }
                                                                                                                             
-

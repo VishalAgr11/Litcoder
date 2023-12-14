@@ -31,10 +31,10 @@ Output:
 2 3 4 5 6 7 8
  */
 
-package Litcoder;
+
 import java.util.*;
 
-public class M3L2_1 {
+public class SlidingSubarrayBeauty {
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
         int size=10;

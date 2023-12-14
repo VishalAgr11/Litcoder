@@ -37,45 +37,38 @@ Output:
 4
  */
 
-package Litcoder;
-import java.util.Scanner;
-public class M1L1_2 {
+import java.util.*;
+
+public class ContiguousArray {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int num =in.nextInt();
-        int arr[]=new int[num];
-        for(int i=0;i<num;i++){
-            arr[i]=in.nextInt();
+        Scanner sc = new Scanner(System.in);
+        String[] input = sc.nextLine().split(" ");
+        int[] nums = new int[input.length];
+
+        for (int i = 0; i < input.length; i++) {
+            nums[i] = Integer.parseInt(input[i]);
         }
-        findsub(arr,num);
-        in.close();
+
+        int result = findMaxLength(nums);
+        System.out.println(result);
     }
-    
-    public static void findsub(int arr[], int n) {
-        int sum=0;
-        int maxsize=-1, startidx=0, endidx=0;
-        
-        for(int i=0;i<n-1;i++){
-            sum=(arr[i]==0)?-1:1;
-            for(int j=i+1;j<n;j++){
-                if(arr[j]==0){
-                    sum+=-1;
-                }
-                else{
-                    sum+=1;
-                }
-                if(sum==0 &&maxsize<j-i+1){
-                    maxsize=j-i+1;
-                    startidx=i;
-                }
+
+    public static int findMaxLength(int[] nums) {
+        int maxLength = 0;
+        int sum = 0;
+        Map<Integer, Integer> sumToIndex = new HashMap<>();
+        sumToIndex.put(0, -1);
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += (nums[i] == 0) ? -1 : 1;
+
+            if (sumToIndex.containsKey(sum)) {
+                maxLength = Math.max(maxLength, i - sumToIndex.get(sum));
+            } else {
+                sumToIndex.put(sum, i);
             }
         }
-        endidx = startidx+maxsize-1;
-        if(maxsize==-1){
-            System.out.println("0");
-        }
-        else{
-            System.out.println(endidx-startidx+1);
-        }
+
+        return maxLength;
     }
 }

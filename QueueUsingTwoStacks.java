@@ -1,6 +1,5 @@
 /*
- Problem Statement
-Queue
+Queue using two Stacks
 Write a program to implement a custom queue using two stacks. The queue should support the following three types of queries:
 Enqueue: This query type is denoted by "1 x", where x is an element to be enqueued. It means that you need to insert element x at the end of the queue.
 Dequeue: This query type is denoted by "2". It indicates that you should remove the element at the front of the queue.
@@ -21,10 +20,10 @@ Output:
 14
 78
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M1L2_2 {
+public class QueueUsingTwoStacks {
     static class Queue {
         static Stack<Integer> s1 = new Stack<Integer>();
         static Stack<Integer> s2 = new Stack<Integer>();

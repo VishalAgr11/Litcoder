@@ -55,10 +55,10 @@ Input:
 Output:
 0 2 3 0
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M4L2_1 {
+public class QueryKthSmallestTrimmedNumber {
     public static void smallestTrimmed(String[] nums, int[][] queries) {
         int[] result = new int[queries.length];
         int strLen = nums[0].length();

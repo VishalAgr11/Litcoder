@@ -40,11 +40,10 @@ input:
 output:
 4
 */
-package Litcoder;
 
 import java.util.*;
 
-public class M3L1_2 {
+public class Candies {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
