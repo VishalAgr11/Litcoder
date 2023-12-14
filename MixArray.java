@@ -50,10 +50,10 @@ Output:
 23
 */
 
-package Litcoder;
+
 import java.util.*;
 
-public class M4L1_2 {
+public class MixArray {
     public static long mixTheArray(long[] arr, int n, int q, int[][] queries) {
         long[] prefixSum = new long[n + 1];
 

@@ -25,10 +25,10 @@ abc abczxy abcpqr
 Output:
 BAD PASSWORD
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M3L2_2 {
+public class StringPrefix {
     public static String checkPassword(String[] passwords) {
         Arrays.sort(passwords);
 

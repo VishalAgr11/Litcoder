@@ -48,11 +48,10 @@ Output:
 NO
  */
 
-package Litcoder;
 import java.util.Scanner;
 import java.util.Arrays;
 
-class M1L2_1{
+public class SudokuBoardValidationAlgorithm{
 static int N = 9;
 // Function to check if all elements of the board[][] array store value in the range[1, 9]
     static boolean isinRange(int[][] board)

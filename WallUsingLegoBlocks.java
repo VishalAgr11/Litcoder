@@ -1,4 +1,5 @@
-/*Build a wall with lego blocks
+/*
+Build a wall with lego blocks
 How many different ways can you build a wall of height 'n' and width 'm' using an infinite number of Lego bricks of four types, each with different dimensions (depth x height x width)? The types of Lego bricks available are:
 
 Depth: 1, Height: 1, Width: 1
@@ -44,14 +45,14 @@ Output:
 3375
 
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M2L2_2 {
+public class WallUsingLegoBlocks {
 	int md=1000000007;
 	int[][] ways = new int[1001][1001];
 	int[][] waysRestrict = new int[1001][1001];
-	public M2L2_2(){
+	public WallUsingLegoBlocks(){
 		for(int[] w : ways) Arrays.fill(w, -1);
 		for(int[] w : waysRestrict) Arrays.fill(w, -1);
 	}
@@ -83,7 +84,6 @@ public class M2L2_2 {
 		if (waysRestrict[n][m] != -1) return waysRestrict[n][m];
 		long ans;
 		if (m==1) ans = 1;
-//		else if (n==1) ans = solve(n,m);
 		else {
 			ans = solve(n,m);
 			for (int i=1; i<m; i++) {
@@ -97,7 +97,7 @@ public class M2L2_2 {
 		return waysRestrict[n][m];
 	}
 	public static void main (String[] args) {
-		M2L2_2 o = new M2L2_2();
+		WallUsingLegoBlocks o = new WallUsingLegoBlocks();
 		Scanner sc = new Scanner(System.in);
 		int a, b;
 		a = sc.nextInt();

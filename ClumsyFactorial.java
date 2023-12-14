@@ -26,10 +26,10 @@ Input:
 Output:
 11
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M4L1_1 {
+public class ClumsyFactorial {
     public static int clumsy(int n) {
         int res=n,count=0;
         for(int i=n-1; i>0; i--){

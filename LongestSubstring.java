@@ -30,10 +30,10 @@ abbedfgi
 Output:
 6
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M2L1_1 {
+public class LongestSubstring {
     public static String findLongestSubstring(String s) {
         if (s == null || s.length() == 0) {
             return "";

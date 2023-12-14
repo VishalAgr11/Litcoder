@@ -31,10 +31,10 @@ Output:
 2
 4
  */
-package Litcoder;
+
 import java.util.*;
 
-public class M4L2_2 {
+public class EgyptianFraction {
 	static void printEgyptian(int nr, int dr)
 	{
 		if (dr == 0 || nr == 0) {

@@ -37,10 +37,9 @@ Output:
 -1
  */
 
-package Litcoder;
 import java.util.*;
 
-public class M2L2_1 {
+public class SumOfNumbersWithUnitDigK {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -71,3 +70,4 @@ public class M2L2_1 {
         return -1;
     }
 }
+
